@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina Principal</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Centraliza verticalmente */
+            align-items: center;
+            height: 100vh; /* Faz a página ter a altura total da tela */
+            background-color: #f4f4f4;
+        }
+
+        .twobuttons {
+            display: flex;
+            justify-content: center; /* Centraliza horizontalmente */
+            align-items: center; /* Centraliza verticalmente as imagens dentro do container */
+            gap: 50px; /* Espaçamento entre os botões */
+            margin-top: 30px; /* Ajusta a altura das imagens em relação ao centro da tela */
+        }
+
+        .twobuttons img {
+            width: 100%; /* Faz a imagem ocupar toda a largura do botão */
+            height: auto; /* Mantém a proporção */
+            max-height: 400px; /* Limita a altura das imagens */
+            object-fit: cover; /* Mantém a proporção, cobrindo o espaço do botão */
+        }
+
+        .text {
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            text-align: center; /* Centraliza o texto */
+        }
+
+        .apresentation {
+            text-align: center; /* Centraliza o título */
+            margin-bottom: 30px;
+        }
+
+        .twoTexts {
+            display: flex;
+            justify-content: center; /* Centraliza os textos */
+            gap: 100px; /* Espaço entre os textos "Mecha" e "Shounen" */
+            margin-top: 10px;
+        }
+
+        .text-below {
+            text-align: center; /* Centraliza cada texto abaixo de sua imagem */
+            font-family: 'Arial', sans-serif;
+        }
+
+        .Mecha, .Shounen {
+            cursor: pointer;
+        }
+
+        .buttonMecha, .buttonShounen {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="apresentation">Bem vindo!</h1>
+    <p class="text">Olá, este é meu trabalho sobre animes do tipo Mecha e Shounen da Eletiva - Universo Anime da professora de artes Marta, espero que curta</p>
+
+    <div class="twobuttons">
+        <div class="buttonMecha">
+            <img src="MechaImage.jpg" alt="Imagem Mecha">
+            <h1 class="text-below Mecha">Mecha</h1>
+        </div>
+        <div class="buttonShounen">
+            <img src="ShounenImage.jpg" alt="Imagem Shounen">
+            <h1 class="text-below Shounen">Shounen</h1>
+        </div>
+    </div>
+
+    <script>
+        document.querySelector('.buttonMecha').addEventListener('click', () => {
+            window.location.href = "Mecha.html";
+        })
+        document.querySelector('.buttonShounen').addEventListener('click', () => {
+            window.location.href = "Shounen.html";
+        })
+    </script>
+</body>
+</html>

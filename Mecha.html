@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MechaPart</title>
+    <style type="text/css">
+        /* Reseta margens e faz com que o corpo ocupe toda a altura da tela */
+        body {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Black rectangle outline tightly around the image */
+        .black-rectangle {
+            width: 98vw; /* Makes the rectangle span the entire viewport width */
+            border: 5px solid black; /* Creates the black outline around the image */
+            box-sizing: border-box; /* Ensures the border is included in the total width */
+        }
+
+        /* Image that spans horizontally and has reduced height */
+        .black-rectangle img {
+            width: 100%; /* Makes the image stretch from one side to the other */
+            height: auto; /* Keeps the height proportional */
+            max-height: 400px; /* Reduces the height to make it smaller */
+            object-fit: cover; /* Ensures it fills horizontally while maintaining aspect ratio */
+        }
+
+        /* Estilos para o texto de edição */
+        .EditTheText {
+            margin: 0 100px 80px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            text-align: justify;
+        }
+
+        /* Estilos para os títulos dos tópicos */
+        .EditTheTitleOfTopic {
+            margin-left: 70px;
+            
+        }
+
+        /* Estilos para a seção de demonstração de vídeo */
+        .demonstration-video {
+            margin: 50px 0 60px;
+            text-align: center;
+        }
+
+        /* Estilos para o texto dentro da seção de vídeo */
+        .text {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            margin-bottom: 10px;
+        }
+
+
+        /* Estilos para o texto de curiosidade */
+        .text-curiosity {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        /* Estilos para a seção de curiosidade */
+        .curiosity {
+            margin-left: 40px;
+            text-align: justify;
+        }
+
+        /* Adiciona espaço entre as seções */
+        .section {
+            width: 100%;
+            max-width: 1200px; /* Ajusta a largura máxima para uma melhor aparência em telas grandes */
+            padding: 0 20px;
+        }
+
+            /* Estilos para o botão aprimorado */
+    .Curiosity-Button {
+    margin-top: 20px; /* Espaço entre o vídeo e o botão */
+    padding: 12px 30px; /* Aumenta o espaçamento interno do botão */
+    font-size: 18px; /* Tamanho da fonte */
+    background: linear-gradient(135deg, #f04a24, #ff6e40); /* Gradiente de cores vibrantes */
+    color: white; /* Cor do texto */
+    border: none; /* Remove borda padrão */
+    border-radius: 10px; /* Borda arredondada */
+    cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidade */
+    transition: all 0.3s ease; /* Animação suave ao interagir */
+    text-transform: uppercase; /* Texto em maiúsculas */
+    letter-spacing: 1.5px; /* Aumenta o espaçamento entre as letras */
+    display: inline-block; /* Mantém o botão inline para centralizar */
+    }   
+
+    /* Efeito de hover no botão aprimorado */
+    .Curiosity-Button:hover {
+    background: linear-gradient(135deg, #ff6e40, #f04a24); /* Inverte o gradiente ao passar o mouse */
+    box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.3); /* Aumenta a sombra ao passar o mouse */
+    transform: translateY(-3px); /* Eleva o botão levemente */
+    }
+
+    /* Efeito de clique no botão */
+    .Curiosity-Button:active {
+        transform: translateY(1px); /* Cria efeito de pressionado ao clicar */
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2); /* Reduz a sombra ao clicar */
+    }
+
+/* Centraliza o botão em relação ao vídeo */
+.section.curiosity {
+    display: flex;
+    justify-content: center; /* Garante que o botão fique centralizado */
+    margin-bottom: 50px; /* Espaço abaixo do botão */
+}
+.CuriosityText {
+    margin-left: 40px; /* Ajusta o alinhamento para a esquerda */
+    font-size: 16px; /* Tamanho de fonte mais apropriado para leitura */
+    line-height: 1.6; /* Aumenta o espaçamento entre as linhas para melhor leitura */
+    text-align: left; /* Alinha o texto à esquerda */
+    max-width: 900px; /* Limita a largura máxima para não ficar muito largo */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.CuriosityText2 {
+    margin-left: 40px; /* Ajusta o alinhamento para a esquerda */
+    line-height: 1.6; /* Aumenta o espaçamento entre as linhas para melhor leitura */
+    text-align: left; /* Alinha o texto à esquerda */
+ 
+}
+    
+.curiosity-content {
+    justify-content: left;
+    text-align: left;
+
+}
+    </style>
+</head>
+<body>
+    <!-- Black rectangle outline tightly around the image -->
+    <div class="black-rectangle">
+        <img src="Mecha-Anime-Featured-Image.avif" alt="Mecha Anime Image">
+    </div>
+
+    <!-- Seções de conteúdo -->
+    <div class="section Origin">
+        <h1 class="EditTheTitleOfTopic">Origem do Mecha</h1>
+        <p class="EditTheText">Os mechas têm suas raízes na cultura japonesa, onde são frequentemente retratados em mangás e animes. 
+            A primeira aparição de um mecha na mídia foi em 1956, com o mangá “Tetsujin 28-Go”, que contava a história de um robô gigante controlado por um menino. 
+            A popularidade dos mechas cresceu ao longo das décadas, com séries como “Mobile Suit Gundam” e “Neon Genesis Evangelion” se tornando verdadeiros fenômenos de público e crítica.</p>
+    </div>
+
+    <div class="section WhatIs">
+        <h1 class="EditTheTitleOfTopic">O que é Mecha</h1>
+        <p class="EditTheText">Mecha é um termo utilizado na cultura pop, especialmente no universo dos animes e mangás, para se referir a robôs gigantes controlados por humanos. 
+            Esses robôs, também conhecidos como mechas, são frequentemente utilizados em batalhas épicas e são uma parte essencial de muitas obras de ficção científica japonesa. 
+            O termo “mecha” vem da palavra japonesa “meka”, que por sua vez é uma abreviação de “mechanical”, ou seja, mecânico. Os mechas são frequentemente representados como máquinas altamente avançadas, com armas poderosas e habilidades especiais.</p>
+    </div>
+
+    <div class="section mean">
+        <h1 class="EditTheTitleOfTopic">Significado de Mecha</h1>
+        <p class="EditTheText">Um mecha (メカ meka?, abreviatura de mechanical, inglês para mecânico) é um robô gigante (geralmente bípede) controlado por um piloto ou controlador, comuns em algumas obras de ficção científica, mangá e anime. 
+            Um mecha geralmente é uma máquina de guerra ou combate com pernas, cujos principais oponentes são monstros gigantes ou outros mechas. 
+            Geralmente são construídos em formato antropomórfico (de ser humano) ou de animais.</p>
+    </div>
+
+    <div class="section demonstration-video">
+        <h1 class="titlevideo">Demonstração</h1>
+        <p class="text">Aqui está um trecho de uma luta de um anime Mecha conhecido como Neon Genesis Evangelion.
+            Isto servirá de demonstração de como é um anime desse tipo.
+        </p>
+        <video controls src="One of the Best Mecha Fight Scene.mp4" class="video" width="500"></video>
+    </div>
+
+    <div class="section curiosity">
+        <button class="Curiosity-Button">Curiosidades do Mecha</button>
+    </div>
+    <div class="curiosity-content" style="display: none;"> <!-- Inicialmente escondido -->
+        <h1 class="CuriosityText2">Curiosidades</h1>
+        <p class="CuriosityText textone">1. O termo "Mecha" vem do japonês e é derivado da palavra "meka," que é uma abreviação de "mechanical" em inglês. Refere-se a robôs gigantes controlados por pilotos humanos ou de forma autônoma.</p>
+        <p class="CuriosityText texttwo">2. O primeiro exemplo de um Mecha na ficção foi em 1940 com o mangá Tetsujin 28-go, onde um garoto controlava um robô gigante. A história foi adaptada para anime e ganhou popularidade mundial.</p>
+        <p class="CuriosityText textthree">3. Existem dois tipos principais de Mecha: Super Robots, que possuem habilidades fantásticas, e Real Robots, que seguem uma abordagem mais realista e científica, como em Mobile Suit Gundam.</p>
+        <p class="CuriosityText textfour">4. Gundam, uma das franquias de Mecha mais famosas, influenciou profundamente a cultura pop japonesa e global, gerando séries, filmes, jogos e modelos colecionáveis chamados "Gunpla."</p>
+        <p class="CuriosityText textfive">5. O gênero Mecha não se limita ao Japão. Ele influenciou produções ocidentais, como filmes de Hollywood, incluindo Pacific Rim, que traz robôs gigantes lutando contra monstros.</p>
+        <p class="CuriosityText textsix">6. A franquia Evangelion revolucionou o gênero ao introduzir Mechas que eram parte biológica e máquinas, ao mesmo tempo explorando temas psicológicos profundos.</p>
+        <p class="CuriosityText textseven">7. Mazinger Z foi um dos primeiros animes de Mecha a popularizar o conceito de um robô pilotado internamente por humanos, sendo um marco importante no gênero.</p>
+        <p class="CuriosityText texteight">8. Muitos animes de Mecha exploram temas de guerra, poder político e consequências sociais da tecnologia, como visto em séries como Code Geass e Gundam.</p>
+        <p class="CuriosityText textnine">9. O Japão construiu réplicas em tamanho real de Mechas, como o famoso Gundam RX-78-2, que está em exposição em Tóquio e pode até se mover.</p>
+        <p class="CuriosityText texten">10. Mechas muitas vezes inspiram fãs a criar seus próprios modelos. "Gunpla" (Gundam Plastic Models) é uma das formas mais populares de colecionáveis de Mecha, permitindo aos fãs montar e personalizar seus próprios robôs.</p>
+    </div>
+    
+    <script>
+        document.querySelector('.Curiosity-Button').addEventListener('click', () => {
+            const curiosityContent = document.querySelector('.curiosity-content');
+            if (curiosityContent.style.display === "none") {
+                curiosityContent.style.display = "block"; // Exibe os parágrafos
+            } else {
+                curiosityContent.style.display = "none"; // Esconde os parágrafos
+            }
+        });
+    </script>
+
+    <script src="Mecha.js"></script>
+</body>
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShounenPart</title>
+    <style type="text/css">
+        /* Reseta margens e faz com que o corpo ocupe toda a altura da tela */
+        body {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Black rectangle outline tightly around the image */
+        .black-rectangle {
+            width: 98vw; /* Makes the rectangle span the entire viewport width */
+            border: 5px solid black; /* Creates the black outline around the image */
+            box-sizing: border-box; /* Ensures the border is included in the total width */
+        }
+
+        /* Image that spans horizontally and has reduced height */
+        .black-rectangle img {
+            width: 100%; /* Makes the image stretch from one side to the other */
+            height: auto; /* Keeps the height proportional */
+            max-height: 400px; /* Reduces the height to make it smaller */
+            object-fit: cover; /* Ensures it fills horizontally while maintaining aspect ratio */
+        }
+
+        /* Estilos para o texto de edição */
+        .EditTheText {
+            margin: 0 100px 80px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            text-align: justify;
+        }
+
+        /* Estilos para os títulos dos tópicos */
+        .EditTheTitleOfTopic {
+            margin-left: 70px;
+            
+        }
+
+        /* Estilos para a seção de demonstração de vídeo */
+        .demonstration-video {
+            margin: 50px 0 60px;
+            text-align: center;
+        }
+
+        /* Estilos para o texto dentro da seção de vídeo */
+        .text {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            margin-bottom: 10px;
+        }
+
+
+        /* Estilos para o texto de curiosidade */
+        .text-curiosity {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        /* Estilos para a seção de curiosidade */
+        .curiosity {
+            margin-left: 40px;
+            text-align: justify;
+        }
+
+        /* Adiciona espaço entre as seções */
+        .section {
+            width: 100%;
+            max-width: 1200px; /* Ajusta a largura máxima para uma melhor aparência em telas grandes */
+            padding: 0 20px;
+        }
+
+    /* Estilos para o botão aprimorado */
+    .Curiosity-Button {
+    margin-top: 20px; /* Espaço entre o vídeo e o botão */
+    padding: 12px 30px; /* Aumenta o espaçamento interno do botão */
+    font-size: 18px; /* Tamanho da fonte */
+    background: linear-gradient(135deg, #f04a24, #ff6e40); /* Gradiente de cores vibrantes */
+    color: white; /* Cor do texto */
+    border: none; /* Remove borda padrão */
+    border-radius: 10px; /* Borda arredondada */
+    cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidade */
+    transition: all 0.3s ease; /* Animação suave ao interagir */
+    text-transform: uppercase; /* Texto em maiúsculas */
+    letter-spacing: 1.5px; /* Aumenta o espaçamento entre as letras */
+    display: inline-block; /* Mantém o botão inline para centralizar */
+    }   
+
+    /* Efeito de hover no botão aprimorado */
+    .Curiosity-Button:hover {
+    background: linear-gradient(135deg, #ff6e40, #f04a24); /* Inverte o gradiente ao passar o mouse */
+    box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.3); /* Aumenta a sombra ao passar o mouse */
+    transform: translateY(-3px); /* Eleva o botão levemente */
+    }
+
+    /* Efeito de clique no botão */
+    .Curiosity-Button:active {
+        transform: translateY(1px); /* Cria efeito de pressionado ao clicar */
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2); /* Reduz a sombra ao clicar */
+    }
+
+/* Centraliza o botão em relação ao vídeo */
+.section.curiosity {
+    display: flex;
+    justify-content: center; /* Garante que o botão fique centralizado */
+    margin-bottom: 50px; /* Espaço abaixo do botão */
+}
+.CuriosityText {
+    margin-left: 40px; /* Ajusta o alinhamento para a esquerda */
+    font-size: 16px; /* Tamanho de fonte mais apropriado para leitura */
+    line-height: 1.6; /* Aumenta o espaçamento entre as linhas para melhor leitura */
+    text-align: left; /* Alinha o texto à esquerda */
+    max-width: 900px; /* Limita a largura máxima para não ficar muito largo */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.CuriosityText2 {
+    margin-left: 40px; /* Ajusta o alinhamento para a esquerda */
+    line-height: 1.6; /* Aumenta o espaçamento entre as linhas para melhor leitura */
+    text-align: left; /* Alinha o texto à esquerda */
+ 
+}
+    
+.curiosity-content {
+    justify-content: left;
+    text-align: left;
+
+}
+    </style>
+</head>
+<body>
+    <!-- Black rectangle outline tightly around the image -->
+    <div class="black-rectangle">
+        <img src="ShounenImageDescription.jpeg" alt="Mecha Anime Image">
+    </div>
+
+    <!-- Seções de conteúdo -->
+    <div class="section Origin">
+        <h1 class="EditTheTitleOfTopic">Origem do Shounen</h1>
+        <p class="EditTheText">O gênero "shounen" tem suas raízes no início do século 20 no Japão, com a popularização de revistas de mangá voltadas para jovens meninos. A partir da década de 1960, revistas como "Weekly Shounen Jump" consolidaram o gênero, publicando séries que se tornaram clássicas e estabeleceram o padrão para histórias de aventura, batalhas e superação. O shounen rapidamente ganhou popularidade global, influenciando a cultura pop em todo o mundo.</p>
+    </div>
+
+    <div class="section WhatIs">
+        <h1 class="EditTheTitleOfTopic">O que é Shounen</h1>
+        <p class="EditTheText">Shounen é um gênero de mangá e anime japonês direcionado principalmente para jovens meninos, geralmente na faixa etária de 10 a 18 anos. Caracteriza-se por histórias cheias de aventura, ação e batalhas, com protagonistas jovens que enfrentam desafios, desenvolvem habilidades e aprendem lições de vida. O gênero é conhecido por temas de amizade, coragem e superação, e frequentemente apresenta personagens em jornadas de crescimento pessoal.</p>
+    </div>
+
+    <div class="section mean">
+        <h1 class="EditTheTitleOfTopic">Significado de Shounen</h1>
+        <p class="EditTheText">"Shounen" é uma palavra japonesa que significa "jovem" ou "menino". No contexto de mangá e anime, refere-se a uma categoria de histórias voltadas para o público jovem masculino, geralmente com protagonistas adolescentes. O gênero é conhecido por suas narrativas dinâmicas que destacam aventuras, batalhas e temas de crescimento pessoal.</p>
+    </div>
+
+    <div class="section demonstration-video">
+        <h1 class="titlevideo">Demonstração</h1>
+        <p class="text">Aqui está um trecho de uma batalha Shounen do anime Naruto, está luta vai server de demonstração para você ver como é animes Shounens
+        </p>
+        <video controls src="Luta bonita! Luta bem-feita! Luta formosa! Minato VS Obito  _ Naruto Shippuden.mp4" class="video" width="500"></video>
+    </div>
+
+    <!-- Seção de curiosidade com o botão centralizado e estilizado -->
+    <div class="section curiosity">
+        <button class="Curiosity-Button">Curiosidades do Shounen</button>
+    </div>
+    <div class="curiosity-content" style="display: none;"> <!-- Inicialmente escondido -->
+        <h1 class="CuriosityText2">Curiosidades</h1>
+        <p class="CuriosityText textone">1. O termo "shounen" vem do japonês e significa "garoto" ou "juventude".</p>
+        <p class="CuriosityText texttwo">2. O shounen é um dos gêneros de mangá e anime mais populares e comercializados.</p>
+        <p class="CuriosityText textthree">3. O público-alvo do shounen é o público masculino jovem, entre 8 e 16 anos.</p>
+        <p class="CuriosityText textfour">4. O enredo do shounen costuma acompanhar a trajetória do personagem principal, que cresce junto com o leitor.</p>
+        <p class="CuriosityText textfive">5. O shounen pode incluir gêneros como fantasia, artes marciais, aventura e ação.</p>
+        <p class="CuriosityText textsix">6. Exemplos de mangás shounen incluem Naruto, My Hero Academia e GTO.</p>
+        <p class="CuriosityText textseven">7. Exemplos de histórias shounen de sucesso no Brasil incluem Cavaleiros do Zodíaco/Saint Seiya e Captain Tsubasa/Super Campeões.</p>
+        <p class="CuriosityText texteight">8. A revista Weekly Shounen Jump, da editora Shueisha, é uma das mais famosas do gênero.</p>
+        <p class="CuriosityText textnine">9. A diferença entre shounen e seinen está nos temas e no conteúdo maduro.</p>
+        <p class="CuriosityText texten">10. O equivalente feminino do shounen é o shōjo.</p>
+    </div>
+    
+    <script>
+        document.querySelector('.Curiosity-Button').addEventListener('click', () => {
+            const curiosityContent = document.querySelector('.curiosity-content');
+            if (curiosityContent.style.display === "none") {
+                curiosityContent.style.display = "block"; // Exibe os parágrafos
+            } else {
+                curiosityContent.style.display = "none"; // Esconde os parágrafos
+            }
+        });
+    </script>
+</body>
+</html>
